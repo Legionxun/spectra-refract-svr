@@ -33,46 +33,46 @@ Run the main program file `Spectral_Refractive_Index_Prediction_System.py`. The 
 
 - **Function**: A new user system handles various user operations such as user registration, login, password reset, password change, guest login, profile editing, permission description, permission management, user management, logout, etc.
 - **Operations**:
-    1.  Upon starting the software, the user login window will pop up first.
-    2.  Users can click the avatar in the upper right corner to reveal a floating box for editing profiles, viewing permission descriptions, requesting permission upgrades, or logging out. The default administrator account is `admin` with the password `admin123`.
-    3.  Only administrators can operate on other users' accounts and permissions.
+  1.  Upon starting the software, the user login window will pop up first.
+  2.  Users can click the avatar in the upper right corner to reveal a floating box for editing profiles, viewing permission descriptions, requesting permission upgrades, or logging out. The default administrator account is `admin` with the password `admin123`.
+  3.  Only administrators can operate on other users' accounts and permissions.
 
 ### 5.2 Generate Theoretical Data
 
 - **Function**: Generates theoretical refractive index images based on spectrometer physical characteristics.
 - **Operations**:
-    1.  Click the "Generate Theoretical Data" button. To customize the generation range, click the "Custom Generate Theoretical Data" button to modify the range and step size in the popup window.
-    2.  The system will generate theoretical images in the `./template` directory.
-    3.  Prediction data images will be generated in the `./actual_data` directory.
-    4.  During generation, progress will be displayed in the progress bar window or the system output box.
-    5.  Both the progress bar window and the function button area have a "Stop Generation" button to pause theoretical data generation at any time.
+  1.  Click the "Generate Theoretical Data" button. To customize the generation range, click the "Custom Generate Theoretical Data" button to modify the range and step size in the popup window.
+  2.  The system will generate theoretical images in the `./template` directory.
+  3.  Prediction data images will be generated in the `./actual_data` directory.
+  4.  During generation, progress will be displayed in the progress bar window or the system output box.
+  5.  Both the progress bar window and the function button area have a "Stop Generation" button to pause theoretical data generation at any time.
 
 ### 5.3 Train Model
 
 - **Function**: Uses theoretical data to train the prediction model.
 - **Operations**:
-    1.  Ensure theoretical data has been generated (images exist in the `./template` directory).
-    2.  Click the "Train Model" button. A selection window will pop up to choose the desired optimization method and clustering algorithm.
-    3.  The training process will run in the background; view progress in the progress bar window.
-    4.  After training completes, the model will be saved in the `./saved_models` directory, and training visualization data will be automatically displayed.
-    5.  Both the progress bar window and the function button area have a "Stop Training" button to pause the model training process at any time.
+  1.  Ensure theoretical data has been generated (images exist in the `./template` directory).
+  2.  Click the "Train Model" button. A selection window will pop up to choose the desired optimization method and clustering algorithm.
+  3.  The training process will run in the background; view progress in the progress bar window.
+  4.  After training completes, the model will be saved in the `./saved_models` directory, and training visualization data will be automatically displayed.
+  5.  Both the progress bar window and the function button area have a "Stop Training" button to pause the model training process at any time.
 
 ### 5.4 Load & Export Model
 
 - **Function**: Load a pre-trained model.
 - **Operations**:
-    1.  Click the "Load Model" button.
-    2.  Select the previously trained model directory `./saved_models`.
-    3.  Upon successful loading, the status bar will display "Loaded".
-    4.  Model files can be exported in Joblib and Pickle formats.
+  1.  Click the "Load Model" button.
+  2.  Select the previously trained model directory `./saved_models`.
+  3.  Upon successful loading, the status bar will display "Loaded".
+  4.  Model files can be exported in Joblib and Pickle formats.
 
 ### 5.5 Model Comparison
 
 - **Function**: Compare all existing models.
 - **Operations**:
-    1.  Click the "Model Comparison" button.
-    2.  If comparison data already exists, the system will automatically display the comparison results and visualization images.
-    3.  If new models have been added, the system will automatically re-evaluate each model's performance and recommend the best model.
+  1.  Click the "Model Comparison" button.
+  2.  If comparison data already exists, the system will automatically display the comparison results and visualization images.
+  3.  If new models have been added, the system will automatically re-evaluate each model's performance and recommend the best model.
 
 ### 5.6 Import Experimental Data
 
@@ -82,72 +82,72 @@ The system provides two import methods:
 
 - **Function**: Import raw experimentally measured data and generate images.
 - **Operations**:
-    1.  Click the "Import Data 1 (Raw Data)" button.
-    2.  Select a text file (.txt format) containing incidence angles and deviation angles.
-    3.  The system will generate an interpolated curve and display it in the results area.
+  1.  Click the "Import Data 1 (Raw Data)" button.
+  2.  Select a text file (.txt format) containing incidence angles and deviation angles.
+  3.  The system will generate an interpolated curve and display it in the results area.
 
 #### 5.6.2 Import Data and Predict to 80 Degrees
 
 - **Function**: Import data and predict/extend the curve up to an incidence angle of 80 degrees.
 - **Operations**:
-    1.  Click the "Import Data 2 (Plot to 80°)" button.
-    2.  Select a text file containing incidence angles and deviation angles.
-    3.  The system will generate the curve extended to 80 degrees and display it.
+  1.  Click the "Import Data 2 (Plot to 80°)" button.
+  2.  Select a text file containing incidence angles and deviation angles.
+  3.  The system will generate the curve extended to 80 degrees and display it.
 
 ### 5.7 Predict Refractive Index
 
 - **Function**: Use the loaded model to predict the prism refractive index.
 - **Operations**:
-    1.  Ensure a model is loaded and experimental data is imported.
-    2.  Click the "Predict Refractive Index" button for a single data prediction.
-    3.  Click the "Batch Predict" button to predict data from all files within a selected folder.
-    4.  The system will display the prediction results (refractive index value and confidence level).
-    5.  The results display area provides a function to save the prediction results to a specified location.
+  1.  Ensure a model is loaded and experimental data is imported.
+  2.  Click the "Predict Refractive Index" button for a single data prediction.
+  3.  Click the "Batch Predict" button to predict data from all files within a selected folder.
+  4.  The system will display the prediction results (refractive index value and confidence level).
+  5.  The results display area provides a function to save the prediction results to a specified location.
 
 ### 5.8 View Optimization History
 
 - **Function**: View the hyperparameter optimization process during model training.
 - **Operations**:
-    1.  Ensure a model is loaded.
-    2.  Click the "View Optimization History" button.
-    3.  The system will display the optimization history chart in the system's default web browser.
+  1.  Ensure a model is loaded.
+  2.  Click the "View Optimization History" button.
+  3.  The system will display the optimization history chart in the system's default web browser.
 
 ### 5.9 View Visualization Results
 
 - **Function**: View visualization charts from the training process.
 - **Operations**:
-    1.  Ensure a model is loaded.
-    2.  Click the "View Visualization Results" button.
-    3.  The system will display charts such as feature visualization and cluster distribution in the results area.
-    4.  If the clustering algorithm is SOM, click the button under the SOM tab to display SOM training-related visualization results in the system's default web browser.
+  1.  Ensure a model is loaded.
+  2.  Click the "View Visualization Results" button.
+  3.  The system will display charts such as feature visualization and cluster distribution in the results area.
+  4.  If the clustering algorithm is SOM, click the button under the SOM tab to display SOM training-related visualization results in the system's default web browser.
 
 ### 5.10 View Prediction History
 
 - **Function**: View historical prediction data.
 - **Operations**:
-    1.  Click the "Prediction History" button or use the shortcut Ctrl+H.
-    2.  Historical prediction data will be displayed in a popup window.
+  1.  Click the "Prediction History" button or use the shortcut Ctrl+H.
+  2.  Historical prediction data will be displayed in a popup window.
 
 ### 5.11 View System Monitoring History
 
 - **Function**: View historical system monitoring data.
 - **Operations**:
-    1.  Click the menu bar item "View System Monitoring History".
-    2.  Historical system monitoring data will be displayed in a popup window.
+  1.  Click the menu bar item "View System Monitoring History".
+  2.  Historical system monitoring data will be displayed in a popup window.
 
 ### 5.12 System Monitoring
 
 - **Function**: Monitor the current computer's hardware usage.
 - **Operations**:
-    1.  Click the "System Monitoring" button.
-    2.  The current computer hardware usage will be displayed under the "System Monitoring" tab in the system output box, updated every second.
+  1.  Click the "System Monitoring" button.
+  2.  The current computer hardware usage will be displayed under the "System Monitoring" tab in the system output box, updated every second.
 
 ### 5.13 Customize Shortcuts
 
 - **Function**: Customize shortcuts for each function.
 - **Operations**:
-    1.  Click the menu bar item "About - Customize Shortcuts".
-    2.  Modify function shortcuts in the popup window.
+  1.  Click the menu bar item "About - Customize Shortcuts".
+  2.  Modify function shortcuts in the popup window.
 
 ## 6. File Structure Description
 
@@ -289,30 +289,30 @@ About: Ctrl+A
 
 - **Cause**: Not enough images in the `./template` directory.
 - **Solution**:
-    1.  Click the "Generate Theoretical Data" button.
-    2.  Ensure there are enough images in the `./template` directory (at least 10).
+  1.  Click the "Generate Theoretical Data" button.
+  2.  Ensure there are enough images in the `./template` directory (at least 10).
 
 ### Issue 2: Inaccurate prediction results
 
 - **Cause**: Insufficient training data for the model.
 - **Solution**:
-    1.  Generate more theoretical data (customize the refractive index range if needed).
-    2.  Increase the number of training samples by clicking the "Data Augmentation" button.
-    3.  Retrain the model.
+  1.  Generate more theoretical data (customize the refractive index range if needed).
+  2.  Increase the number of training samples by clicking the "Data Augmentation" button.
+  3.  Retrain the model.
 
 ### Issue 3: Training process lags or crashes
 
 - **Solution**:
-    1.  Close other resource-intensive programs.
-    2.  Reduce training parameters (decrease the number of trials).
-    3.  Check if system memory is sufficient.
+  1.  Close other resource-intensive programs.
+  2.  Reduce training parameters (decrease the number of trials).
+  3.  Check if system memory is sufficient.
 
 ### Issue 4: Unable to save results
 
 - **Solution**:
-    1.  Check if disk space is sufficient.
-    2.  Confirm the software has write permission for the directory.
-    3.  Check if antivirus software is blocking file writes.
+  1.  Check if disk space is sufficient.
+  2.  Confirm the software has write permission for the directory.
+  3.  Check if antivirus software is blocking file writes.
 
 ## 10. Technical Support
 
@@ -386,9 +386,9 @@ If the program becomes unresponsive, end the process via Task Manager.
 
 - **功能**：新增的用户系统，能处理用户的各种操作，如用户注册、登录、重置密码、修改密码、访客登录、编辑资料、权限说明、权限管理、用户管理、退出登录等。
 - **操作**：
-	1. 启动软件后，会先弹出用户登录窗口
-	2. 用户可在右上角点击头像，出现悬浮框即可进行编辑资料、查看权限说明、提升权限、退出登录操作。其中默认管理员账号是admin，密码是admin123。
-	3. 只有管理员才能对其他用户的账号、权限进行操作
+  1. 启动软件后，会先弹出用户登录窗口
+  2. 用户可在右上角点击头像，出现悬浮框即可进行编辑资料、查看权限说明、提升权限、退出登录操作。其中默认管理员账号是admin，密码是admin123。
+  3. 只有管理员才能对其他用户的账号、权限进行操作
 
 ### 5.2 生成理论数据
 
@@ -423,9 +423,9 @@ If the program becomes unresponsive, end the process via Task Manager.
 
 - **功能**：比较所有存在的模型
 - **操作**：
-	1. 点击"模型比较"按钮
-	2. 如果已有比较数据，系统将自动显示比较结果及可视化图片
-	3. 如果有新增的模型，系统将自动重新评估每个模型的性能，并给出最佳推荐模型
+  1. 点击"模型比较"按钮
+  2. 如果已有比较数据，系统将自动显示比较结果及可视化图片
+  3. 如果有新增的模型，系统将自动重新评估每个模型的性能，并给出最佳推荐模型
 
 ### 5.6 导入实验数据
 
@@ -435,9 +435,9 @@ If the program becomes unresponsive, end the process via Task Manager.
 
 - **功能**：导入实验测量的原始数据并生成图像
 - **操作**：
-	1. 点击"导入数据1(原始数据)"按钮
-	2. 选择包含入射角和偏向角的文本文件（.txt格式）
-	3. 系统将生成插值曲线并显示在结果区域
+  1. 点击"导入数据1(原始数据)"按钮
+  2. 选择包含入射角和偏向角的文本文件（.txt格式）
+  3. 系统将生成插值曲线并显示在结果区域
 
 #### 5.6.2 导入数据并预测至80度
 
@@ -478,29 +478,29 @@ If the program becomes unresponsive, end the process via Task Manager.
 
 - **功能**：查看历史预测数据
 - **操作**：
-	1. 点击"预测历史"按钮或者快捷键Ctrl+H
-	2. 将在弹窗里显示历史预测数据
+  1. 点击"预测历史"按钮或者快捷键Ctrl+H
+  2. 将在弹窗里显示历史预测数据
 
 ### 5.11 查看系统监控历史
 
 - **功能**：查看历史系统监控数据
 - **操作**：
-	1. 点击菜单栏“查看系统监控历史”
-	2. 将在弹窗里显示系统监控历史数据
+  1. 点击菜单栏“查看系统监控历史”
+  2. 将在弹窗里显示系统监控历史数据
 
 ### 5.12 系统监控
 
 - **功能**：对当前电脑硬件使用情况进行监控
 - **操作**：
-	1. 点击"系统监控"按钮
-	2. 将在系统输出框的“系统监控”标签页下显示当前电脑硬件使用情况，每隔秒更新一次数据
+  1. 点击"系统监控"按钮
+  2. 将在系统输出框的“系统监控”标签页下显示当前电脑硬件使用情况，每隔秒更新一次数据
 
 ### 5.13 自定义快捷键
 
 - **功能**：自定义每个功能的快捷键
 - **操作**：
-	1. 点击菜单栏"关于-自定义快捷键"项
-	2. 可在弹窗里修改功能的快捷键
+  1. 点击菜单栏"关于-自定义快捷键"项
+  2. 可在弹窗里修改功能的快捷键
 
 ## 6. 文件结构说明
 
@@ -605,19 +605,23 @@ If the program becomes unresponsive, end the process via Task Manager.
 模型管理                                                                         Ctrl+M
 
 ### 预测分析
+
 预测折射率                                                                     Ctrl+P
 批量预测                                                                         Ctrl+B
 
 ### 查看分析
+
 查看优化历史                                                                 Ctrl+O
 查看可视化结果                                                             Ctrl+V
 模型比较                                                                         Ctrl+Shift+M
 
 ### 历史记录
+
 查看预测历史                                                                 Ctrl+H
 查看监控日志                                                                 Ctrl+N
 
 ### 系统工具
+
 系统监控                                                                         Ctrl+Y
 刷新界面                                                                         F5
 清空图表                                                                         Ctrl+D
@@ -652,16 +656,16 @@ If the program becomes unresponsive, end the process via Task Manager.
 ### 问题3. 训练过程卡顿或崩溃
 
 - **解决**：
-	1. 关闭其他占用资源的程序
-	2. 降低训练参数（减少试验次数）
-	3. 检查系统内存是否充足
+  1. 关闭其他占用资源的程序
+  2. 降低训练参数（减少试验次数）
+  3. 检查系统内存是否充足
 
 ### 问题4. 无法保存结果
 
 - **解决**：
-	1. 检查磁盘空间是否充足
-	2. 确认软件具有目录写入权限
-	3. 检查防病毒软件是否阻止文件写入
+  1. 检查磁盘空间是否充足
+  2. 确认软件具有目录写入权限
+  3. 检查防病毒软件是否阻止文件写入
 
 ## 10. 技术支持
 
@@ -678,9 +682,10 @@ If the program becomes unresponsive, end the process via Task Manager.
 ### 正常退出
 
 1. 点击窗口右上角关闭按钮或使用快捷键Ctrl+Q
-3. 系统会自动保存当前状态并安全退出
+2. 系统会自动保存当前状态并安全退出
 
 ### 强制退出
+
 如遇程序无响应，可通过任务管理器结束进程
 
 > 温馨提示：
@@ -693,6 +698,7 @@ If the program becomes unresponsive, end the process via Task Manager.
 > 6. 默认管理员账号是admin，密码是admin123。
 
 ---
+
 **版本：V3.2.0**
 **发布日期：2025年**
 **版权所有 © OptiSVR研究室**
