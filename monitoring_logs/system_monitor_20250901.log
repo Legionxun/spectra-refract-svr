@@ -1,0 +1,55 @@
+2025-09-01 11:39:41,050 - SystemMonitor - INFO - CPU使用率: 21.6%
+2025-09-01 11:39:41,050 - SystemMonitor - INFO - 内存使用: 23.56 GB / 31.12 GB (75.7%)
+2025-09-01 11:39:41,051 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.4%)
+2025-09-01 11:39:41,051 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 6%, 显存 318 MB / 512 MB (62.1%)
+2025-09-01 11:39:41,051 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 80%, 显存 6577 MB / 8188 MB (80.3%)
+2025-09-01 11:39:43,403 - SystemMonitor - INFO - CPU使用率: 8.7%
+2025-09-01 11:39:43,403 - SystemMonitor - INFO - 内存使用: 23.59 GB / 31.12 GB (75.8%)
+2025-09-01 11:39:43,403 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.4%)
+2025-09-01 11:39:43,404 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 3%, 显存 318 MB / 512 MB (62.1%)
+2025-09-01 11:39:43,404 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 80%, 显存 6577 MB / 8188 MB (80.3%)
+2025-09-01 11:39:45,575 - SystemMonitor - INFO - CPU使用率: 6.6%
+2025-09-01 11:39:45,576 - SystemMonitor - INFO - 内存使用: 23.57 GB / 31.12 GB (75.7%)
+2025-09-01 11:39:45,576 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.4%)
+2025-09-01 11:39:45,576 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 3%, 显存 318 MB / 512 MB (62.1%)
+2025-09-01 11:39:45,576 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 80%, 显存 6577 MB / 8188 MB (80.3%)
+2025-09-01 11:41:29,265 - SystemMonitor - INFO - CPU使用率: 8.0%
+2025-09-01 11:41:29,266 - SystemMonitor - INFO - 内存使用: 20.63 GB / 31.12 GB (66.3%)
+2025-09-01 11:41:29,266 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.3%)
+2025-09-01 11:41:29,266 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 8%, 显存 317 MB / 512 MB (61.9%)
+2025-09-01 11:41:29,266 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 2%, 显存 231 MB / 8188 MB (2.8%)
+2025-09-01 11:41:35,560 - SystemMonitor - INFO - CPU使用率: 6.0%
+2025-09-01 11:41:35,561 - SystemMonitor - INFO - 内存使用: 20.68 GB / 31.12 GB (66.4%)
+2025-09-01 11:41:35,561 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.3%)
+2025-09-01 11:41:35,561 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 8%, 显存 318 MB / 512 MB (62.1%)
+2025-09-01 11:41:35,561 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 2%, 显存 231 MB / 8188 MB (2.8%)
+2025-09-01 11:41:41,701 - SystemMonitor - INFO - CPU使用率: 13.4%
+2025-09-01 11:41:41,703 - SystemMonitor - INFO - 内存使用: 20.67 GB / 31.12 GB (66.4%)
+2025-09-01 11:41:41,703 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.3%)
+2025-09-01 11:41:41,703 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 12%, 显存 318 MB / 512 MB (62.1%)
+2025-09-01 11:41:41,703 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 2%, 显存 231 MB / 8188 MB (2.8%)
+2025-09-01 11:41:48,068 - SystemMonitor - INFO - CPU使用率: 12.5%
+2025-09-01 11:41:48,069 - SystemMonitor - INFO - 内存使用: 20.72 GB / 31.12 GB (66.6%)
+2025-09-01 11:41:48,069 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.3%)
+2025-09-01 11:41:48,069 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 19%, 显存 304 MB / 512 MB (59.4%)
+2025-09-01 11:41:48,069 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 2%, 显存 231 MB / 8188 MB (2.8%)
+2025-09-01 11:41:54,443 - SystemMonitor - INFO - CPU使用率: 5.6%
+2025-09-01 11:41:54,443 - SystemMonitor - INFO - 内存使用: 20.54 GB / 31.12 GB (66.0%)
+2025-09-01 11:41:54,443 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.3%)
+2025-09-01 11:41:54,443 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 5%, 显存 318 MB / 512 MB (62.1%)
+2025-09-01 11:41:54,443 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 2%, 显存 231 MB / 8188 MB (2.8%)
+2025-09-01 11:42:13,527 - SystemMonitor - INFO - CPU使用率: 13.4%
+2025-09-01 11:42:13,527 - SystemMonitor - INFO - 内存使用: 20.65 GB / 31.12 GB (66.3%)
+2025-09-01 11:42:13,527 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.3%)
+2025-09-01 11:42:13,527 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 8%, 显存 318 MB / 512 MB (62.1%)
+2025-09-01 11:42:13,528 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 2%, 显存 231 MB / 8188 MB (2.8%)
+2025-09-01 11:42:18,646 - SystemMonitor - INFO - CPU使用率: 26.5%
+2025-09-01 11:42:18,647 - SystemMonitor - INFO - 内存使用: 20.60 GB / 31.12 GB (66.2%)
+2025-09-01 11:42:18,647 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.3%)
+2025-09-01 11:42:18,647 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 8%, 显存 318 MB / 512 MB (62.1%)
+2025-09-01 11:42:18,647 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 2%, 显存 231 MB / 8188 MB (2.8%)
+2025-09-01 11:42:23,768 - SystemMonitor - INFO - CPU使用率: 9.7%
+2025-09-01 11:42:23,768 - SystemMonitor - INFO - 内存使用: 20.58 GB / 31.12 GB (66.1%)
+2025-09-01 11:42:23,769 - SystemMonitor - INFO - 磁盘使用: 368.97 GB / 524.48 GB (70.3%)
+2025-09-01 11:42:23,769 - SystemMonitor - INFO - GPU 0 (AMD Radeon(TM) 890M Graphics): 使用率 6%, 显存 318 MB / 512 MB (62.1%)
+2025-09-01 11:42:23,769 - SystemMonitor - INFO - GPU 1 (NVIDIA GeForce RTX 4060 Laptop GPU): 使用率 2%, 显存 231 MB / 8188 MB (2.8%)

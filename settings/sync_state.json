@@ -1,0 +1,42 @@
+{
+  "user_data/users_info.db": {
+    "hash": "4343bad729c3e86097e83a312bb816f0",
+    "last_sync": "2025-09-16T02:42:55.348573"
+  },
+  "user_data/admin/user_config.json": {
+    "hash": "82ca5e9607af8917c1514ee747c2f7e8",
+    "last_sync": "2025-09-15T14:17:23.544211"
+  },
+  "user_data/admin/history/prediction_history.csv": {
+    "hash": "9b39b8fa126de0532836125da185079e",
+    "last_sync": "2025-09-15T14:17:28.135046"
+  },
+  "user_data/Legionxun/avatar.png": {
+    "hash": "60d51de14d68a0e833f108a60ba7df25",
+    "last_sync": "2025-09-15T16:24:13.658850"
+  },
+  "user_data/Legionxun/user_config.json": {
+    "hash": "82ca5e9607af8917c1514ee747c2f7e8",
+    "last_sync": "2025-09-15T14:17:54.081864"
+  },
+  "user_data/迅哥/avatar.png": {
+    "hash": "0355c1573cdb2efc9f09c11454253a05",
+    "last_sync": "2025-09-15T14:18:14.698035"
+  },
+  "user_data/迅哥/user_config.json": {
+    "hash": "82ca5e9607af8917c1514ee747c2f7e8",
+    "last_sync": "2025-09-15T14:18:18.482742"
+  },
+  "user_data/迅哥/history/prediction_history.csv": {
+    "hash": "2208a20489d35e6e1104d6809402ea17",
+    "last_sync": "2025-09-15T14:18:23.421650"
+  },
+  "history/model_comparison_results.csv": {
+    "hash": "137a51a7686fc2014c2cf5892f1d013a",
+    "last_sync": "2025-09-15T14:18:39.919220"
+  },
+  "history/prediction_history.csv": {
+    "hash": "ff83cd7f70d1d3fedbc22f098aaedcf7",
+    "last_sync": "2025-09-15T14:18:43.854191"
+  }
+}
