@@ -1,3 +1,4 @@
+# core/gui_components/auto_updater.py
 import requests, os, sys, logging, subprocess, urllib3
 from PySide6.QtWidgets import QMessageBox, QProgressDialog, QApplication
 from PySide6.QtCore import Qt, QThread, Signal
@@ -12,7 +13,6 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class UpdateChecker(QThread):
     """检查更新线程"""
-    # 定义信号，用于通知主线程检查结果
     update_available = Signal(dict)  # 有可用更新时发出信号
     no_update = Signal()  # 无更新时发出信号
     error_occurred = Signal(str)  # 出现错误时发出信号
@@ -53,25 +53,19 @@ class UpdateChecker(QThread):
             response = None
             errors = []
 
-            # 方法1: 正常请求
+            # 不验证SSL证书
             try:
-                response = session.get(self.repo_url, timeout=20, verify=True)
+                response = session.get(self.repo_url, timeout=20, verify=False)
+                self.logger.warning("使用不验证SSL证书的方式获取更新信息")
             except Exception as e:
-                errors.append(f"正常请求失败: {str(e)}")
+                errors.append(f"跳过SSL验证也失败: {str(e)}")
 
-                # 方法2: 不验证SSL证书
+                # 使用系统证书
                 try:
-                    response = session.get(self.repo_url, timeout=20, verify=False)
-                    self.logger.warning("使用不验证SSL证书的方式获取更新信息")
+                    response = session.get(self.repo_url, timeout=20, verify=True,
+                                           certifi_cert=True if 'certifi' in sys.modules else False)
                 except Exception as e:
-                    errors.append(f"跳过SSL验证也失败: {str(e)}")
-
-                    # 方法3: 使用系统证书
-                    try:
-                        response = session.get(self.repo_url, timeout=20, verify=True,
-                                               certifi_cert=True if 'certifi' in sys.modules else False)
-                    except Exception as e:
-                        errors.append(f"使用系统证书也失败: {str(e)}")
+                    errors.append(f"使用系统证书也失败: {str(e)}")
 
             if response is None or response.status_code != 200:
                 error_msg = "无法连接到更新服务器。错误详情:\n" + "\n".join(errors)
@@ -131,18 +125,11 @@ class UpdateDownloader(QThread):
             response = None
             errors = []
 
-            # 方法1: 正常请求
             try:
-                response = session.get(self.download_url, stream=True, timeout=60, verify=True)
+                response = session.get(self.download_url, stream=True, timeout=60, verify=False)
+                self.logger.warning("使用不验证SSL证书的方式下载更新文件")
             except Exception as e:
-                errors.append(f"正常下载失败: {str(e)}")
-
-                # 方法2: 不验证SSL证书
-                try:
-                    response = session.get(self.download_url, stream=True, timeout=60, verify=False)
-                    self.logger.warning("使用不验证SSL证书的方式下载更新文件")
-                except Exception as e:
-                    errors.append(f"跳过SSL验证也失败: {str(e)}")
+                errors.append(f"跳过SSL验证也失败: {str(e)}")
 
             if response is None:
                 error_msg = "无法下载更新文件。错误详情:\n" + "\n".join(errors)
@@ -158,7 +145,7 @@ class UpdateDownloader(QThread):
 
             # 写入文件并更新进度
             with open(file_path, 'wb') as f:
-                for chunk in response.iter_content(chunk_size=8192):
+                for chunk in response.iter_content(chunk_size=819200):
                     if chunk:
                         f.write(chunk)
                         downloaded_size += len(chunk)
@@ -178,7 +165,7 @@ class UpdateDownloader(QThread):
 
 class AutoUpdater:
     """自动更新管理器"""
-    def __init__(self, main_window, current_version="3.2.1"):
+    def __init__(self, main_window, current_version="3.0.0"):
         self.main_window = main_window
         self.current_version = current_version
         self.logger = logging.getLogger("AutoUpdater")
@@ -196,7 +183,7 @@ class AutoUpdater:
         else:
             self.logger.debug("正在静默检查更新...")
 
-        # 创建进度对话框（仅在非静默模式下显示）
+        # 创建进度对话框
         if not silent:
             self.progress_dialog = QProgressDialog("正在检查更新...", "取消", 0, 0, self.main_window)
             self.progress_dialog.setWindowModality(Qt.WindowModal)
@@ -209,7 +196,6 @@ class AutoUpdater:
         self.update_checker.no_update.connect(lambda: self.on_no_update(silent))
         self.update_checker.error_occurred.connect(lambda msg: self.on_check_error(msg, silent))
 
-        # 静默模式下不显示进度条，但仍需在完成后清理
         if silent:
             self.update_checker.finished.connect(lambda: None)
         else:
@@ -225,7 +211,7 @@ class AutoUpdater:
         self.logger.info(f"发现新版本 {latest_version}")
         print(f"发现新版本 {latest_version}")
 
-        # 弹出对话框询问用户是否下载更新（仅在非静默模式下）
+        # 弹出对话框询问用户是否下载更新
         reply = QMessageBox.question(
             self.main_window,
             "发现新版本",
@@ -345,7 +331,6 @@ class AutoUpdater:
 
             # 根据文件类型执行不同的操作
             if file_path.endswith('.exe'):
-                # 启动exe安装程序
                 subprocess.Popen([file_path])
 
                 # 询问是否关闭当前程序
