@@ -705,7 +705,7 @@ class RefractiveIndexApp(QMainWindow):
         self.enable_all_buttons()
 
         # 初始化自动更新器
-        self.auto_updater = AutoUpdater(self, "5.0.0 Stable")
+        self.auto_updater = AutoUpdater(self, "5.0.0-Stable")
         self.auto_updater.check_for_updates(silent=True)
 
         # 加载系统设置
@@ -3202,7 +3202,7 @@ class RefractiveIndexApp(QMainWindow):
         """检查更新"""
         # 初始化自动更新器
         if not hasattr(self, 'auto_updater'):
-            self.auto_updater = AutoUpdater(self, "5.0.0 Stable")
+            self.auto_updater = AutoUpdater(self, "5.0.0-Stable")
         self.auto_updater.check_for_updates()
 
     def show_usage_guide(self):
